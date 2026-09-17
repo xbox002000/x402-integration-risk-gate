@@ -1,0 +1,15 @@
+{
+  "verdict": "PASS",
+  "public_repo": "https://github.com/xbox002000/x402-integration-risk-gate",
+  "install": "npm install github:xbox002000/x402-integration-risk-gate#main",
+  "npx_help": "npx x402-integration-risk-gate help",
+  "total_s_approx": 19,
+  "kpi_under_5_min": true,
+  "gate_exit": 20,
+  "decision": "PROCEED_WITH_CAUTION",
+  "downstream": "CONTINUE_WITH_MITIGATIONS",
+  "paid": true,
+  "self_pay": true,
+  "url": "https://x402-integration-risk.vercel.app/v1/decide/integration-risk",
+  "chain": "install\u2192discover\u2192W01 trigger\u2192payment\u2192PROCEED_WITH_CAUTION\u2192CONTINUE_WITH_MITIGATIONS"
+}

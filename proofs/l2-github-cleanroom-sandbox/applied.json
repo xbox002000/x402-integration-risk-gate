@@ -1,0 +1,11 @@
+{
+  "gate_decision": "PROCEED_WITH_CAUTION",
+  "downstream_action": "CONTINUE_WITH_MITIGATIONS",
+  "applied": {
+    "wrote_integration_stub": true,
+    "wrote_mitigations": true,
+    "decision": "PROCEED_WITH_CAUTION",
+    "action": "CONTINUE_WITH_MITIGATIONS"
+  },
+  "workDir": "./sandbox"
+}
