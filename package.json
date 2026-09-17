@@ -1,0 +1,35 @@
+{
+  "name": "x402-integration-risk-gate",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Self-serve CLI + agent skill for x402 integration-risk gate. Frozen POST /v1/decide/integration-risk @ $0.10.",
+  "bin": {
+    "x402-integration-risk-gate": "./bin/cli.mjs",
+    "x402-ir-gate": "./bin/cli.mjs"
+  },
+  "files": [
+    "bin/",
+    "skill/",
+    "README.md",
+    "PAYMENT.md",
+    "LICENSE"
+  ],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "gate": "node ./bin/cli.mjs gate",
+    "apply": "node ./bin/cli.mjs apply",
+    "demo:w01": "node ./bin/cli.mjs demo-w01"
+  },
+  "dependencies": {
+    "@coinbase/cdp-sdk": "^1.56.0",
+    "@x402/fetch": "^2.26.0"
+  },
+  "keywords": ["x402", "web3", "integration-risk", "agent", "cdp"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xbox002000/x402-integration-risk-gate.git"
+  },
+  "homepage": "https://github.com/xbox002000/x402-integration-risk-gate#readme"
+}
