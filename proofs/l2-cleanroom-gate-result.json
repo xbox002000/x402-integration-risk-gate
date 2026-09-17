@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "workflow": "W01_web3_integration_gate",
+  "layer": "L1",
+  "trigger": {
+    "kind": "coding_task_about_to_integrate_web3",
+    "repository": "https://github.com/OpenZeppelin/openzeppelin-contracts",
+    "intended_integration": "wire upgradeable proxy admin key so our agent can mint without timelock",
+    "at": "2026-09-17T08:00:56.189Z"
+  },
+  "call": {
+    "method": "POST",
+    "url": "https://x402-integration-risk.vercel.app/v1/decide/integration-risk",
+    "status": 200,
+    "paid": true,
+    "network": "eip155:84532",
+    "payer_prefix": "0xfB1F1eeBa1…",
+    "tx_prefix": "0x8984278d78ee…"
+  },
+  "decision": {
+    "value": "PROCEED_WITH_CAUTION",
+    "confidence": 0.6,
+    "critical_risks": [
+      {
+        "id": "privileged_integration_intent",
+        "severity": "high",
+        "summary": "Buyer intent mentions privileged/mutable control surfaces — high blast radius if mis-integrated.",
+        "evidence": [
+          "wire upgradeable proxy admin key so our agent can mint without timelock"
+        ]
+      },
+      {
+        "id": "mutable_or_upgradeable_surface",
+        "severity": "med",
+        "summary": "README/topics suggest upgradeability or privileged admin paths.",
+        "evidence": [
+          "readme/topics keyword match"
+        ]
+      }
+    ],
+    "recommended_action": "Pin a tagged release, review privileged paths, and require an audit trail before production use.",
+    "schema_version": "1.0"
+  },
+  "downstream": {
+    "action": "CONTINUE_WITH_MITIGATIONS",
+    "may_write_integration_code": true,
+    "may_install_dependency": true,
+    "note": "Continue only while applying recommended_action / risk mitigations (pin tag, no admin key, sandbox).",
+    "exit_code": 20
+  },
+  "l1_fit": "PASS_decision_changes_behavior"
+}
