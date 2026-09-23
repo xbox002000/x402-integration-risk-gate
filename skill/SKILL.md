@@ -4,6 +4,7 @@ description: >-
   use this when a coding agent is about to integrate a Web3 SDK/protocol/wallet
   repo — must call x402 integration-risk and change downstream behavior
   (stop/caution/proceed); L1/L2 workflow gate
+license: MIT
 ---
 # Web3 integration-risk gate
 
